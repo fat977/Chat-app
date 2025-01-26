@@ -1,0 +1,13 @@
+@import './variables';
+.dark-mode{
+        .navbar-content,.form-select{
+            background-color: $jet-black !important;
+            color: $light-gray !important;
+        }
+        background-color: black !important;
+        .dropdown-menu,.accordion-item,.accordion-button,.receiver{
+            background-color: black !important;
+        }
+       
+   
+}

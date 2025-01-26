@@ -1,0 +1,25 @@
+.auth{
+    background-color: rgb(240, 233, 233);
+    .form-control{
+        border: 1px solid blue !important;
+        border-radius: 0;
+
+        &:focus{
+            border: 1px solid black !important;
+        }
+    }
+
+    .login-p,.register-p{
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(87, 87, 237);
+            color: white;
+        }
+    }
+
+   
+        .welcome p,.fa-arrow-left{
+            font-size: 2rem
+        };
+    
+}

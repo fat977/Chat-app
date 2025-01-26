@@ -1,0 +1,51 @@
+@import './variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden !important;
+  background-color: $secondary-color !important;
+  color: $light-gray !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.accordion-button {
+  background-color: $primary-color;
+  color: $light-gray;
+
+  &:not(.collapsed) {
+    background-color: $secondary-color !important;
+  }
+}
+
+.accordion-body {
+  background-color: $light-gray;
+
+  [class^="svg-inline-"] {
+    color: $primary-color;
+  }
+}
+
+input::placeholder {
+  color: $light-gray !important;
+}
+
+[class^="svg-inline-"] {
+cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.form-select ,.form-check-input,.form-control{
+    &:focus{
+        box-shadow: none !important;
+    }
+}
+
+.input-group-text,.form-control{
+    border: none !important;
+
+}
+
+.accordion-button:focus{
+    outline: 0 !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,84 @@
+@import '../../styles/variables';
+.navbar {
+    border-right: 1px solid $light-gray;
+    z-index: 99999;
+    .navbar-links {
+        height: 100vh;
+        box-shadow: 5px 0 10px $black-color;
+
+        /* Horizontal shadow to the left */
+        .icon.active {
+            color: $primary-color;
+            /* Active color */
+            transform: scale(1.2);
+            /* Optional: Scale the active icon */
+        }
+
+    }
+    .navbar-content {
+        flex: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    div.navbar-links {
+        position: fixed;
+        bottom: 0;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-end;
+        flex-direction: row !important;
+        width: 100% !important;
+        background-color: $secondary-color;
+        height: 70px !important;
+    }
+
+
+    div.navbar {
+        border-right: none !important;
+    }
+
+    .messages{
+        height: 350px !important;
+        overflow-y: scroll !important;
+    }
+
+    .send-message{
+        bottom: -30px !important;
+    }
+
+    .actions{
+        height: 100% !important;
+        overflow-y: scroll !important;
+    }
+
+    div.chats {
+        border-right: none !important;
+        padding: 20px;
+    }
+
+    div.settings {
+        width: 100% !important;
+
+        .settings-details {
+            overflow-y: scroll !important;
+            height: 50% !important;
+
+        }
+
+       
+    }
+
+    div.profile {
+        width: 100% !important;
+
+        .profile-details {
+            overflow-y: scroll !important;
+            height: 100% !important;
+
+        }
+
+       
+    }
+}

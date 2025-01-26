@@ -1,0 +1,57 @@
+@import '../../../../styles/variables';
+.settings {
+    position: relative;
+    flex-grow: 1;
+    z-index: 2;
+
+    .settings-header {
+        height: 150px;
+        background: url('../../../../assets/profile/profile.jpg');
+        background-size: cover;
+        color: $light-gray;
+    }
+
+    .profile-info {
+        top: 100px;
+
+        .img-preview {
+            input {
+                display: none;
+            }
+
+            img {
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .icon {
+                bottom: 2%;
+                right: -10%;
+                background-color: $dark-gray;
+                padding: 2px 5px;
+                border-radius: 50%;
+                cursor: pointer;
+                border: 3px solid $dark-gray;
+                color: $light-gray;
+            }
+        }
+    }
+    .settings-details {
+        overflow-y: scroll !important;
+        height: 300px;
+
+        .form-select {
+            background-color: $primary-color;
+        }
+    }
+
+    .form-select {
+        width: auto !important;
+        display: inline-flex;
+        border: none !important;
+        padding: 10px 30px 10px 10px !important;
+        background-color: $secondary-color !important;
+    }
+}

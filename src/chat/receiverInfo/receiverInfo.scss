@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+.receiver{
+    background-color: $secondary-color;
+    z-index: 2;
+
+    .receiver-header{
+        position: relative;
+        background: url(`../../../../assets/users/profile-user.jpg);
+        background-size: cover;
+        height: 200px;
+        color: $primary-color;
+    
+        .user-profile{
+            bottom: 10px;
+        }
+    }
+}

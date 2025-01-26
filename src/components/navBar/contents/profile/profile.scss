@@ -1,0 +1,38 @@
+@import '../../../../styles/variables';
+.profile{
+    position: relative;
+    flex-grow: 1;
+    z-index: 2 !important;
+    .profile-header{
+        height: 150px;
+        background: url('../../../../assets/profile/profile.jpg');
+        background-size: cover;
+        color: $light-gray;
+
+    }
+
+    .profile-info{
+        box-sizing: border-box;
+        overflow: hidden;
+        width: 100%;
+        position: absolute;
+        top: 120px;
+        img{
+            border: 3px solid $dark-gray;
+            border-radius: 50%;
+        }
+    }
+
+    .profile-details{
+        overflow-y: scroll !important;
+        height: 300px;
+        z-index: 2;
+
+        .background-icon{
+            border-radius: 5px;
+            background-color: $secondary-color;
+        }
+
+       
+    }
+}

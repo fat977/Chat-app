@@ -1,0 +1,16 @@
+.dropdown-toggle{
+    background-color: transparent !important;
+    color: rgb(255, 255, 255) !important;
+    border:none !important
+  }
+  
+  .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0 !important;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: 0 !important;
+    border-bottom: 0;
+    border-left: 0 !important;
+  }

@@ -1,0 +1,64 @@
+@import '../styles/variables';
+.chat{
+    position: relative;
+    border-right: 1px solid rgb(211, 196, 196);
+    .chat-header{
+        height: 90px;
+        img{
+            border-radius: 50%;
+        }
+        span{
+            color: $light-gray;
+        }
+    }
+
+    hr{
+        margin: 0 !important;
+    }
+    .messages{
+        height: 400px;
+        overflow-y: scroll !important;
+        span{
+            color: $light-gray;
+        }
+        .user-message,.my-message{
+            img{
+                border-radius: 50%;
+            }
+            .message{
+                max-width: 60%;
+            }
+        }
+
+        .my-message .message p{
+            background-color: rgb(129, 129, 233);
+            color: wheat;
+        }
+    }
+
+    .send-message{
+        position: absolute;
+        bottom: 0px;
+        right: 0;
+        width: 100%;
+        input{
+            background-color: $primary-color;
+            color: $light-gray;
+            border-radius: 10px;
+            font-size: 16px;
+
+            &:disabled{
+                cursor: not-allowed;
+            }
+        }
+
+        .emoji{
+            position: relative;
+            .picker{
+                position: absolute;
+                bottom: 60px;
+                right: 10px;
+            }
+        }
+    }   
+}
