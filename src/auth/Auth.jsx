@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./auth.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
 import { auth, db } from "../lib/firebase";
 import {
   createUserWithEmailAndPassword,
@@ -57,10 +56,10 @@ export default function Auth() {
     }
   };
   return (
-    <div className="auth row d-flex align-items-center vh-100">
-      <div className="col-lg-6 d-flex justify-content-end">
+    <div className="auth d-flex justify-content-center align-items-center vh-100">
+      <div className="col-lg-6 col-12 d-flex justify-content-center">
         {isLogin ? (
-          <div className="login  w-75 p-3 shadow justify-content-center d-flex align-items-center">
+          <div className="login p-3 shadow justify-content-center d-flex align-items-center">
             <Form onSubmit={handleLogin} className="text-center">
               <h2>Sign in</h2>
               <Form.Control
@@ -87,7 +86,7 @@ export default function Auth() {
             </Form>
           </div>
         ) : (
-          <div className="register w-75 justify-content-center p-3 shadow d-flex align-items-center">
+          <div className="register justify-content-center p-3 shadow d-flex align-items-center">
             <Form onSubmit={handleRegister} className="text-center">
               <h2>Sign up</h2>
               <Form.Control
@@ -121,16 +120,6 @@ export default function Auth() {
             </Form>
           </div>
         )}
-      </div>
-      <FontAwesomeIcon className="col-lg-1" icon={faArrowLeft} />
-
-      <div className="welcome col-lg-4">
-        <div className="d-flex align-items-center gap-3">
-          <p className="mb-0 shadow p-5 text-center">
-            {" "}
-            <span className="fw-bold">Welcome</span> to our App
-          </p>
-        </div>
       </div>
     </div>
   );

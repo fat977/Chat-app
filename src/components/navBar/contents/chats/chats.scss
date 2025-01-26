@@ -2,7 +2,7 @@
 .chats{
     .search{
         .input-group{
-            border: 1px solid rgb(219, 209, 209) !important;
+            border: 1px solid $dark-gray !important;
             
         }
         .input-group-text,.form-control{
@@ -18,7 +18,7 @@
             .user-details{
                 cursor: pointer;
                 p,span{
-                    color: $light-gray;
+                    color: $jet-black;
                 }
                 img{
                     border-radius: 50%;

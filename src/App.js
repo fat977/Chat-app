@@ -30,6 +30,7 @@ function App() {
       {currentUser ? (
         <div className="d-flex">
         <Router>
+          {/* <MyNavbar /> */}
           <NavBar />
           {chatId && <Chat />}
           {chatId && <ReceiverInfo />}

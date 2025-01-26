@@ -99,7 +99,7 @@ export default function Chat() {
           });
         }
       });
-      setText('')
+      setText("");
     } catch (err) {
       console.log(err);
     }
@@ -128,7 +128,7 @@ export default function Chat() {
             alt="profile-user"
           />
           <div>
-            <p className="mb-0">{user.username}</p>
+            <h5 className="mb-0">{user.username}</h5>
             <span className="fs-6">Active now</span>
           </div>
         </div>
@@ -164,43 +164,46 @@ export default function Chat() {
               />
             )}
             <div className="message mx-2">
-            <p className="mb-0 border p-2 rounded">
-             {message.text}
-            </p>
-            <span>{TransformTime(message.createdAt.toDate().toLocaleString())}</span>
-          </div>
-          <Dropdown>
-            <Dropdown.Toggle id="dropdown-basic">
-              <FontAwesomeIcon icon={faEllipsisVertical} color="black" />
-            </Dropdown.Toggle>
+              <p className="mb-0 border p-2 rounded">{message.text}</p>
+              <span>
+                {TransformTime(message.createdAt.toDate().toLocaleString())}
+              </span>
+            </div>
+            <Dropdown>
+              <Dropdown.Toggle id="dropdown-basic">
+                <FontAwesomeIcon icon={faEllipsisVertical} color="black" />
+              </Dropdown.Toggle>
 
-            <Dropdown.Menu>
-              <Dropdown.Item
-                href="#/action-1"
-                className="d-flex justify-content-between align-items-center"
-              >
-                Copy <FontAwesomeIcon icon={faCopy} />
-              </Dropdown.Item>
-              <Dropdown.Item
-                href="#/action-2"
-                className="d-flex justify-content-between align-items-center"
-              >
-                Forward <FontAwesomeIcon icon={faShare} />
-              </Dropdown.Item>
-              <Dropdown.Item
-                href="#/action-3"
-                className="d-flex justify-content-between align-items-center"
-              >
-                Delete <FontAwesomeIcon icon={faTrash} />
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+              <Dropdown.Menu>
+                <Dropdown.Item
+                  href="#/action-1"
+                  className="d-flex justify-content-between align-items-center"
+                >
+                  Copy <FontAwesomeIcon icon={faCopy} />
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#/action-2"
+                  className="d-flex justify-content-between align-items-center"
+                >
+                  Forward <FontAwesomeIcon icon={faShare} />
+                </Dropdown.Item>
+                <Dropdown.Item
+                  href="#/action-3"
+                  className="d-flex justify-content-between align-items-center"
+                >
+                  Delete <FontAwesomeIcon icon={faTrash} />
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </div>
         ))}
 
         <div ref={endRef}></div>
       </div>
-      <div className="send-message d-flex justify-content-around align-items-center border-top p-3 gap-3">
+      <div
+        style={{ backgroundColor: !isDarkMode && "var(--primary-color)" }}
+        className="send-message d-flex justify-content-around align-items-center border-top p-3 gap-3"
+      >
         <div className="icons d-flex gap-3">
           <FontAwesomeIcon icon={faImage} />
           <FontAwesomeIcon icon={faCamera} />
@@ -210,7 +213,11 @@ export default function Chat() {
           type="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder={isReceiverBlocked || isCurrentUserBlocked ? 'You cannot send a message' :"Type a message..."}
+          placeholder={
+            isReceiverBlocked || isCurrentUserBlocked
+              ? "You cannot send a message"
+              : "Type a message..."
+          }
           disabled={isReceiverBlocked || isCurrentUserBlocked}
         />
         <div className="emoji">

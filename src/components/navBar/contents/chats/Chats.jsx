@@ -112,7 +112,7 @@ export default function Chats() {
         <div className="users custom-scrollbar px-2 my-2">
           {filteredChats?.map((chat) => (
             <div
-              className="user-details rounded px-3 py-2 mb-3"
+              className="user-details border rounded px-3 py-2 mb-3"
               key={chat.chatId}
               onClick={() => {handleSelect(chat);handleOpenChat()}}
               style={{ backgroundColor: chat?.isSeen ? "transparent" : "#7435DD" }}

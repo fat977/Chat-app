@@ -52,7 +52,7 @@ export default function NavBar() {
       }}
       
     >
-      <div className="navbar-links d-flex gap-5  flex-column p-4 ">
+      <div className="navbar-links d-flex gap-3 gap-sm-1 gap-lg-5 flex-column p-4 ">
         <img
           src={require(`../../assets/logo/chat.png`)}
           width={"30px"}

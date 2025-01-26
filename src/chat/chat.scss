@@ -1,14 +1,14 @@
 @import '../styles/variables';
 .chat{
     position: relative;
-    border-right: 1px solid rgb(211, 196, 196);
+    border-right: 1px solid $light-gray;
     .chat-header{
         height: 90px;
         img{
             border-radius: 50%;
         }
         span{
-            color: $light-gray;
+            color: $jet-black;
         }
     }
 
@@ -16,10 +16,10 @@
         margin: 0 !important;
     }
     .messages{
-        height: 400px;
+        height: 410px;
         overflow-y: scroll !important;
         span{
-            color: $light-gray;
+            color: $jet-black;
         }
         .user-message,.my-message{
             img{
@@ -31,12 +31,13 @@
         }
 
         .my-message .message p{
-            background-color: rgb(129, 129, 233);
-            color: wheat;
+            background-color: $primary-color;
+            color: $light-gray;
         }
     }
 
     .send-message{
+        //background-color: black !important;
         position: absolute;
         bottom: 0px;
         right: 0;

@@ -106,7 +106,7 @@ export default function Settings() {
       </div>
       <div
         className="settings-details custom-scrollbar p-3"
-        style={{ marginTop: "150px" }}
+        style={{ marginTop: "180px" }}
       >
         <Accordion>
           <Accordion.Item eventKey="0">

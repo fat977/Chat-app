@@ -40,7 +40,7 @@
     }
     .settings-details {
         overflow-y: scroll !important;
-        height: 300px;
+        height: 250px;
 
         .form-select {
             background-color: $primary-color;
@@ -52,6 +52,6 @@
         display: inline-flex;
         border: none !important;
         padding: 10px 30px 10px 10px !important;
-        background-color: $secondary-color !important;
+        background-color: transparent !important;
     }
 }

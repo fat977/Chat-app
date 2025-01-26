@@ -10,8 +10,8 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden !important;
-  background-color: $secondary-color !important;
-  color: $light-gray !important;
+  background-color: $white-color !important;
+  color: $jet-black !important;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -21,7 +21,7 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #888;
+  background: $dark-gray;
   border-radius: 4px;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 input::placeholder {
-  color: $light-gray !important;
+  color: $dark-gray !important;
 }
 
 [class^="svg-inline-"] {

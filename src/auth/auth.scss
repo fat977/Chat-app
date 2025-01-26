@@ -1,25 +1,25 @@
-.auth{
-    background-color: rgb(240, 233, 233);
-    .form-control{
-        border: 1px solid blue !important;
-        border-radius: 0;
+@import '../styles/variables';
 
-        &:focus{
-            border: 1px solid black !important;
-        }
+.auth {
+    background: linear-gradient(to right, $primary-color, $secondary-color);
+
+    .form-control {
+        border: 1px solid $secondary-color !important;
+        border-radius: 0;
     }
 
-    .login-p,.register-p{
+    .login-p,
+    .register-p {
         cursor: pointer;
-        &:hover{
-            background-color: rgb(87, 87, 237);
+        &:hover {
+            background-color: $secondary-color;
             color: white;
         }
     }
 
-   
-        .welcome p,.fa-arrow-left{
-            font-size: 2rem
-        };
-    
+    .btn {
+        background-color: $secondary-color !important;
+        border: none !important;
+    }
+
 }

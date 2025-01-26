@@ -1,6 +1,6 @@
 @import '../../styles/variables';
 .navbar {
-    border-right: 1px solid $light-gray;
+    border-right: 1px solid $dark-gray;
     z-index: 99999;
     .navbar-links {
         height: 100vh;
@@ -13,6 +13,7 @@
             transform: scale(1.2);
             /* Optional: Scale the active icon */
         }
+        
 
     }
     .navbar-content {
@@ -30,8 +31,12 @@
         align-items: flex-end;
         flex-direction: row !important;
         width: 100% !important;
-        background-color: $secondary-color;
+        background-color: $white-color;
         height: 70px !important;
+        svg{
+            flex: 2 !important;
+            white-space: wrap !important; 
+        }
     }
 
 
@@ -40,7 +45,7 @@
     }
 
     .messages{
-        height: 350px !important;
+        height: 500px !important;
         overflow-y: scroll !important;
     }
 
@@ -63,7 +68,7 @@
 
         .settings-details {
             overflow-y: scroll !important;
-            height: 50% !important;
+            height: 450px !important;
 
         }
 
@@ -75,7 +80,7 @@
 
         .profile-details {
             overflow-y: scroll !important;
-            height: 100% !important;
+            height: 450px !important;
 
         }
 
