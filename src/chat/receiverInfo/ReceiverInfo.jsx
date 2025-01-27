@@ -54,7 +54,7 @@ const handleBlock = async() => {
               />
             </div>
             <div className="user-profile d-flex flex-column position-absolute">
-              <h6>My Friend</h6>
+              <h6>{user.username}</h6>
               <span>
                 <FontAwesomeIcon icon={faCircleDot} /> Online
               </span>

@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useMenuContext } from "../context/MenuContext";
 import "./chat.scss";
 import {
+  faArrowLeft,
   faCamera,
   faCircleInfo,
   faCopy,
@@ -44,7 +45,7 @@ export default function Chat() {
     setOpen(false);
   };
 
-  const { isOpenChat } = useOenChatContext();
+  const { isOpenChat,setIsOpenChat } = useOenChatContext();
   const { windowSize } = useWindowSizeContext();
 
   const [chat, setChat] = useState();
@@ -121,12 +122,13 @@ export default function Chat() {
     >
       <div className="chat-header px-4 d-flex align-items-center justify-content-between w-100">
         <div className="d-flex align-items-center gap-3">
-          <img
-            src={require(`../assets/users/profile-user.jpg`)}
-            width={"40px"}
-            height={"40px"}
-            alt="profile-user"
+          <FontAwesomeIcon
+            icon={faArrowLeft}
+            style={{ display: windowSize < 1200 ? "block" : "none" }}
+            onClick={()=>setIsOpenChat(false)}
           />
+
+          <div className="img d-flex justify-content-center align-items-center">{user.username.charAt(0).toUpperCase()}</div>
           <div>
             <h5 className="mb-0">{user.username}</h5>
             <span className="fs-6">Active now</span>
@@ -156,12 +158,8 @@ export default function Chat() {
             key={message?.createdAt}
           >
             {message.senderId !== currentUser?.id && (
-              <img
-                src={require(`../assets/users/profile-user.jpg`)}
-                alt="profile-user"
-                width={"30px"}
-                height={"30px"}
-              />
+              <div className="img d-flex justify-content-center align-items-center">{user.username.charAt(0).toUpperCase()}</div>
+
             )}
             <div className="message mx-2">
               <p className="mb-0 border p-2 rounded">{message.text}</p>
@@ -202,7 +200,7 @@ export default function Chat() {
       </div>
       <div
         style={{ backgroundColor: !isDarkMode && "var(--primary-color)" }}
-        className="send-message d-flex justify-content-around align-items-center border-top p-3 gap-3"
+        className="send-message d-flex justify-content-around align-items-center p-3 gap-3"
       >
         <div className="icons d-flex gap-3">
           <FontAwesomeIcon icon={faImage} />

@@ -17,20 +17,20 @@ import AddUser from "./addUser/AddUser";
 import { useSearchContext } from "../../../../context/CloseSearch";
 import TransformTime from "../../../../helpers/TransformTime";
 export default function Chats() {
-  const { isOpenChat,setIsOpenChat } = useOenChatContext();
+  const { isOpenChat, setIsOpenChat } = useOenChatContext();
   const { windowSize } = useWindowSizeContext();
 
   const handleOpenChat = () => {
     setIsOpenChat((prevState) => !prevState); // Correct way to toggle
   };
 
-  const {addMode, setAddMode} = useSearchContext()
+  const { addMode, setAddMode } = useSearchContext();
   const [chats, setChats] = useState([]);
   const [input, setInput] = useState("");
   const { currentUser } = useUserStore();
   const { changeChat } = useChatStore();
 
-  console.log(chats)
+  console.log(chats);
   useEffect(() => {
     const unSub = onSnapshot(
       doc(db, "userChats", currentUser.id),
@@ -102,7 +102,7 @@ export default function Chats() {
             <FontAwesomeIcon
               icon={addMode ? faMinus : faPlus}
               cursor={"pointer"}
-              onClick={()=>setAddMode(prev=>!prev)}
+              onClick={() => setAddMode((prev) => !prev)}
             />
           </InputGroup.Text>
         </InputGroup>
@@ -114,18 +114,20 @@ export default function Chats() {
             <div
               className="user-details border rounded px-3 py-2 mb-3"
               key={chat.chatId}
-              onClick={() => {handleSelect(chat);handleOpenChat()}}
-              style={{ backgroundColor: chat?.isSeen ? "transparent" : "#7435DD" }}
-
+              onClick={() => {
+                handleSelect(chat);
+                handleOpenChat();
+              }}
+              style={{
+                backgroundColor: chat?.isSeen ? "transparent" : "#7435DD",
+              }}
             >
               <div className="d-flex justify-content-between">
                 <div className="d-flex  align-items-center gap-3">
-                  <img
-                    src={require(`../../../../assets/users/user.jpeg`)}
-                    width={"50px"}
-                    height={"50px"}
-                    alt="user"
-                  />
+                  <div className="img d-flex justify-content-center align-items-center">
+                    {chat.user.username.charAt(0).toUpperCase()}
+                  </div>
+
                   <div>
                     <h6>
                       {chat.user.blocked.includes(currentUser.id)
@@ -135,7 +137,9 @@ export default function Chats() {
                     <p className="mb-0">{chat.lastMessage}</p>
                   </div>
                 </div>
-                <span>{TransformTime(chat.updatedAt.toDate().toLocaleString())}</span>
+                <span>
+                  {TransformTime(chat.updatedAt.toDate().toLocaleString())}
+                </span>
               </div>
             </div>
           ))}

@@ -8,19 +8,21 @@ import { Accordion, Form, NavLink } from "react-bootstrap";
 import "./settings.scss";
 import { useEffect, useRef, useState } from "react";
 import { useDarkMode } from "../../../../context/DarkModeContext";
+import { useUserStore } from "../../../../lib/userStore";
 export default function Settings() {
+  const {currentUser} = useUserStore()
   const { setIsDarkMode } = useDarkMode();
   const [selectedColor, setSelectedColor] = useState(() => {
     return localStorage.getItem("selectedColor") || "#C381E7"; // Default color if none saved
   });
 
   const colors = [
-    "#a76c60",
-    "#53865c",
+    "#f1c4bb",
+    "rgb(200 251 210)",
     "#676f95",
     "#fff",
-    "#C381E7",
-    "#78a4a1",
+    "#dbbaec",
+    "#bce5e2",
   ];
 
   useEffect(() => {
@@ -93,7 +95,7 @@ export default function Settings() {
             accept="image/*"
             /* onChange={handleImageChange} */
           />
-          <h3>Fatma Ahmad</h3>
+          <h3> {currentUser.username}</h3>
           <FontAwesomeIcon icon={faCircleDot} color="green" />
           <Form.Select>
             <option> Active</option>

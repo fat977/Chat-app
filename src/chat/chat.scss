@@ -4,8 +4,11 @@
     border-right: 1px solid $light-gray;
     .chat-header{
         height: 90px;
-        img{
+        .img{
             border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            background-color: $light-gray;
         }
         span{
             color: $jet-black;
@@ -22,8 +25,11 @@
             color: $jet-black;
         }
         .user-message,.my-message{
-            img{
+            .img{
                 border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                background-color: $light-gray;
             }
             .message{
                 max-width: 60%;
