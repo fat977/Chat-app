@@ -1,13 +1,22 @@
 @import './variables';
 .dark-mode{
-        .navbar-content,.form-select{
-            background-color: $jet-black !important;
-            color: $light-gray !important;
-        }
-        background-color: black !important;
-        .dropdown-menu,.accordion-item,.accordion-button,.receiver{
+        .navbar-links{
             background-color: black !important;
         }
-       
+        .navbar-content,.form-select{
+            background-color: $jet-black !important;
+            color: $white-color !important;
+        }
+        background-color: $jet-black !important;
+        .dropdown-menu,.accordion-item,.accordion-button,.receiver,.accordion-body,.chat{
+            background-color: black !important;
+        }
+        .img{
+            color: $jet-black !important;
+        }
+
+        h5,span,.svg-inline--fa,p{
+            color: $white-color !important;
+        }
    
 }
